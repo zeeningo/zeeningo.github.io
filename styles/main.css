@@ -328,27 +328,60 @@ button:focus-visible {
 .contact-card h3 { margin-bottom: 0.6rem; }
 .contact-card p { color: var(--bark); }
 
-.section-band {
-  background: var(--clay);
-  text-align: center;
+/* Contact form */
+.contact-form {
+  max-width: 720px;
+  margin: 3rem auto 0;
+  background: var(--paper);
+  border: 1px solid var(--clay);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: grid;
+  gap: 1.2rem;
+  scroll-margin-top: 6rem; /* keep form clear of the sticky header */
 }
-.section-band p {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.4rem;
-  color: var(--espresso);
-  max-width: 46ch;
-  margin: 0 auto 1rem;
+.contact-form h3 { margin: 0; }
+.contact-form .form-intro { margin: 0; }
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
 }
-.section-band cite {
-  display: block;
-  font-family: var(--font-text);
-  font-style: normal;
+.contact-form label {
+  display: grid;
+  gap: 0.4rem;
   font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--espresso);
 }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font: 300 1rem/1.5 var(--font-text);
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--espresso);
+  background: var(--sand);
+  border: 1px solid var(--bark);
+  border-radius: var(--radius);
+  padding: 0.75em 0.9em;
+  width: 100%;
+}
+.contact-form textarea { resize: vertical; min-height: 8rem; }
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 2px solid var(--terracotta-text);
+  outline-offset: 1px;
+  border-color: var(--terracotta-text);
+}
+.contact-form button { justify-self: start; }
+.contact-form button[disabled] { opacity: 0.6; cursor: wait; }
+.form-status { margin: 0; font-weight: 400; color: var(--espresso); }
+.form-status.is-error { color: #8a2c1d; }
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Footer */
 .site-footer {
