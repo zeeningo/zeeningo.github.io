@@ -314,6 +314,8 @@ button:focus-visible {
 /* Contact / booking */
 .contact-grid {
   display: grid;
+  max-width: 720px; /* matches the contact form width below */
+  margin: 0 auto;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
@@ -341,6 +343,18 @@ button:focus-visible {
   scroll-margin-top: 6rem; /* keep form clear of the sticky header */
 }
 .contact-form h3 { margin: 0; }
+.form-services {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+.form-services li {
+  padding-left: 1.2rem;
+  border-left: 2px solid var(--clay);
+}
+.form-services strong { font-weight: 500; color: var(--espresso); }
 .contact-form .form-intro { margin: 0; }
 .contact-form .form-row {
   display: grid;
