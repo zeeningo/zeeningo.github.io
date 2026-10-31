@@ -1,0 +1,18 @@
+.DS_Store
+
+# Contains a personal phone number — keep local only
+Zee Ningo Fitness Instructor Resume.pdf
+
+# macOS
+.DS_Store
+
+# Original/source assets — kept local, not published (site uses optimized copies in images/)
+Zee Yog*.JPEG
+Zee Yog*.JPG
+*.pdf
+1c-Colorways/
+Oya-Movement-1c-WildSprout/
+Oya-Movement-Logo-Files/
+
+# Local Claude Code settings
+.claude/
